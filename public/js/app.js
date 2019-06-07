@@ -31,7 +31,7 @@ weatherForm.addEventListener('submit',(e)=>{
     // console.log(sercg)
     msg1.textContent='loading...'
     msg2.textContent=''
-    fetch(`http://localhost:3000/weather?address=${serchPlace.value}`)
+    fetch(`/weather?address=${serchPlace.value}`)
     .then(result=>{
         // console.log(result)
         return result.json()

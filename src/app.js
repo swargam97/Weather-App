@@ -8,6 +8,7 @@ const weather=require('./utils/forecast');
 const publicPath=path.join(__dirname,'../public');
 const viewPath=path.join(__dirname,'../template/views');
 const partialspath=path.join(__dirname,'../template/partials')
+const port=process.env.PORT || 3000
 
 // Initialising express
 const app=express();
@@ -39,7 +40,7 @@ app.get('/about',(req,res)=>{
         name:'Swargam'
     });
 });
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log("Server is running succesfully");
 })
 app.get('/help/*',(req,res)=>{
